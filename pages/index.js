@@ -1,118 +1,271 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import Image from 'next/image';
+import Link from 'next/link';
+import {
+  ArrowSmallRightIcon,
+  CloudArrowUpIcon,
+  LockClosedIcon,
+  ArrowPathIcon,
+  FingerPrintIcon,
+  Cog6ToothIcon,
+  ServerIcon,
+} from '@heroicons/react/20/solid';
+import { Bars3Icon } from '@heroicons/react/24/solid';
 
 export default function Home() {
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">pages/index.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <header>
+        <div className="bg-[#141B2B] md:w-full w-full h-screen relative">
+          <img
+            src="/img/hero.avif"
+            alt="hero"
+            className="w-full h-full object-cover absolute mix-blend-overlay"
+          />
+
+          <nav className="md:flex hidden justify-between items-center px-5 py-5 absolute inset-0 h-20 z-20">
+            <div className="bg-indigo-500 w-9 h-9 rounded-full " />
+            <div>
+              <ul className="flex gap-20 items-center text-white font-semibold text-lg">
+                <li>Product</li>
+                <li>Features</li>
+                <li>Marketplace</li>
+                <li>Company</li>
+              </ul>
+            </div>
+            <div>
+              <Link
+                href="#"
+                className="flex items-center text-white font-semibold text-lg"
+              >
+                Log in <ArrowSmallRightIcon className="h-7 mt-1" />
+              </Link>
+            </div>
+          </nav>
+          {/* Mobile nav */}
+          <nav className="md:hidden flex justify-between items-center p-6">
+            <div className="bg-indigo-500 w-9 h-9 rounded-full" />
+            <div>
+              <Link href="#">
+                <Bars3Icon className="h-7 text-gray-400" />
+              </Link>
+            </div>
+          </nav>
+
+          <section className=" mx-auto relative flex flex-col justify-center items-center h-full">
+            <div className="flex flex-col gap-10 justify-center items-center max-w-7xl -mt-80 md:-mt-0">
+              <div className="md:flex hidden gap-2 border border-gray-600 rounded-full py-1 px-4 ">
+                <h3 className="flex text-lg text-gray-300 font-semibold">
+                  Announcing our next round of funding.
+                </h3>
+                <Link
+                  href="#"
+                  className="text-lg text-white font-bold flex items-center"
+                >
+                  Read more
+                  <ArrowSmallRightIcon className="h-6 mt-[2px]" />
+                </Link>
+              </div>
+              <div className="text-white md:text-7xl font-bold md:w-3/4 text-center text-4xl w-full">
+                <h1>Deploy to the cloud with confidence</h1>
+              </div>
+              <div className="text-slate-300 md:text-xl font-semibold text-center md:w-3/4 md:px-0 px-7">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+                  non aperiam officia soluta inventore rem perferendis suscipit
+                  error, debitis adipisci quibusdam eaque voluptatibus incidunt?
+                </p>
+              </div>
+              <div className="flex gap-7 text-white font-semibold text-lg">
+                <button className="border border-indigo-500 rounded-lg bg-indigo-500 px-4 py-2">
+                  Get started
+                </button>
+                <button className="flex items-center">
+                  Live demo <ArrowSmallRightIcon className="h-6 mt-1" />
+                </button>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap  absolute inset-x-0 bottom-0 max-w-[1500px] md:justify-between mx-auto pb-32 md:pb-10  gap-10 justify-center">
+              <img
+                src="/img/transistor-white.svg"
+                alt="transistor"
+                className="md:h-16 h-[50px]  fill-white"
+              />
+              <img
+                src="/img/reform-white.svg"
+                alt="reform"
+                className="md:h-16 h-[50px] text-white"
+              />
+              <img
+                src="/img/tuple-white.svg"
+                alt="tuple"
+                className="md:h-16 h-[50px] text-white"
+              />
+              <img
+                src="/img/savvycal-white.svg"
+                alt="savvycal"
+                className="md:h-16 h-[50px] text-white"
+              />
+              <img
+                src="/img/statamic-white.svg"
+                alt="statamic"
+                className="md:h-16 h-[50px] text-white"
+              />
+            </div>
+          </section>
         </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+      </header>
+      <main>
+        <section className="md:mt-64 mt-32">
+          <div className="flex md:flex flex-col md:justify-center md:items-center gap-2 md:max-w-7xl w-full md:mx-auto md:px-0 px-5">
+            <h3 className="text-xl text-indigo-500 font-semibold">
+              Everything you need
+            </h3>
+            <h1 className="md:text-5xl text-3xl font-bold">
+              No server? No problem.
+            </h1>
+            <p className="md:text-xl text-lg text-slate-600 font-semibold md:w-3/5 md:text-center md:mt-6 mt-3">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+              voluptate dolorem quidem animi! Lorem ipsum dolor sit.
+            </p>
+          </div>
+          <div className="mx-auto  relative mt-20 md:px-0 px-5">
+            <div className="absolute bg-gradient-to-t from-white inset-x-0 bottom-0 md:h-[600px] h-[150px] flex items-end z-20 md:translate-y-16 translate-y-14" />
+            <div className="absolute bg-gradient-to-t from-white inset-x-0 bottom-0 md:h-[600px] h-[150px] flex items-end z-20 md:translate-y-16 translate-y-14" />
+            <div className="h-full max-w-[1500px] relative mx-auto border-2  border-slate-200 rounded-2xl shadow-2xl shadow-slate-300 overflow-hidden">
+              <img
+                src="/img/screenshot.png"
+                alt="screenshot"
+                className="h-full  object-cover w-full "
+              />
+            </div>
+          </div>
+          <div className="max-w-[1500px] mx-auto grid md:grid-cols-3 justify-items-center md:justify-items-start gap-y-20 gap-x-10 py-20 relative -translate-y-10 z-50 md:px-0 px-5">
+            <div className="flex gap-5  justify-center">
+              <div>
+                <CloudArrowUpIcon className="h-6 text-indigo-500" />
+              </div>
+              <div className="flex">
+                <p className="text-lg text-slate-600 font-semibold">
+                  <span className="text-lg text-black font-bold">
+                    Push to deploy.
+                  </span>{' '}
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Facere, quis.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-5 ">
+              <div>
+                <LockClosedIcon className="h-6 text-indigo-500" />
+              </div>
+              <div className="flex">
+                <p className="text-lg text-slate-600 font-semibold">
+                  <span className="text-lg text-black font-bold">
+                    SSL certificates.
+                  </span>{' '}
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Facere, quis. Lorem ipsum dolor sit amet.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-5 ">
+              <div>
+                <ArrowPathIcon className="h-6 text-indigo-500" />
+              </div>
+              <div className="flex">
+                <p className="text-lg text-slate-600 font-semibold">
+                  <span className="text-lg text-black font-bold">
+                    Simple queues.
+                  </span>{' '}
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Facere, quis.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-5 ">
+              <div>
+                <FingerPrintIcon className="h-6 text-indigo-500" />
+              </div>
+              <div className="flex">
+                <p className="text-lg text-slate-600 font-semibold">
+                  <span className="text-lg text-black font-bold">
+                    Advanced security.
+                  </span>{' '}
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Facere, quis.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-5 ">
+              <div>
+                <Cog6ToothIcon className="h-6 text-indigo-500" />
+              </div>
+              <div className="flex">
+                <p className="text-lg text-slate-600 font-semibold">
+                  <span className="text-lg text-black font-bold">
+                    Powerful API.
+                  </span>{' '}
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Facere, quis. Lorem, ipsum dolor.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-5 ">
+              <div>
+                <ServerIcon className="h-6 text-indigo-500" />
+              </div>
+              <div className="flex">
+                <p className="text-lg text-slate-600 font-semibold">
+                  <span className="text-lg text-black font-bold">
+                    Satabase backups.
+                  </span>{' '}
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Facere, quis.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div className="h-[570px] bg-slate-900 relative md:grid hidden grid-cols-5">
+            <div className="h-[150px] w-[150px] top-[35%] left-[50%] absolute rounded-full bg-purple-400 translate-x-[50%] trasnlate-y-[50%] blur-[120px]" />
+            <div className="h-[150px] w-[150px] top-[80%] left-[50%] absolute rounded-full bg-purple-400 translate-x-[50%] trasnlate-y-[50%] blur-[120px]" />
+            <div className="h-[150px] w-[150px] top-[90%] left-[40%] absolute rounded-full bg-purple-400 translate-x-[50%] trasnlate-y-[50%] blur-[120px]" />
+            <div className="h-[150px] w-[150px] top-[90%] left-[30%] absolute rounded-full bg-purple-400 translate-x-[50%] trasnlate-y-[50%] blur-[120px]" />
+            <div className="h-[150px] w-[150px] top-[70%] left-[60%] absolute rounded-full bg-purple-400 translate-x-[50%] trasnlate-y-[50%] blur-[120px]" />
+            <div className="h-[150px] w-[150px] top-[70%] left-[70%] absolute rounded-full bg-purple-400 translate-x-[50%] trasnlate-y-[50%] blur-[120px]" />
+            <div className="h-[150px] w-[150px] top-[50%] left-[75%] absolute rounded-full bg-purple-400 translate-x-[50%] trasnlate-y-[50%] blur-[120px]" />
+            <div className="h-[170px] w-[170px] bottom-[80%] left-[80%] absolute rounded-full bg-purple-400 translate-x-[50%] trasnlate-y-[50%] blur-[120px]" />
+            <div className="h-[150px] w-[150px] top-[10%] left-[95%] absolute rounded-full bg-purple-400 translate-x-[50%] trasnlate-y-[50%] blur-[120px]" />
+            <div className="grid col-span-2 h-6 translate-x-60 -translate-y-[150%]">
+              <img
+                src="/img/woman.avif"
+                alt="woman"
+                className="object-cover absolute h-[650px] border border-hidden rounded-xl"
+              />
+            </div>
+            <div className="grid col-span-3 content-center mt-24">
+              <div className="flex flex-col gap-10">
+                <p className="text-3xl text-white font-bold w-3/4">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Ullam molestias, quo fugiat necessitatibus quas, voluptatibus
+                  impedit ab voluptas soluta eaque perspiciatis! Similique
+                  nostrum possimus odio autem dicta, omnis.
+                </p>
+                <div className="flex flex-col gap-2">
+                  <h3 className="text-xl font-semibold text-white">
+                    Judith Black
+                  </h3>
+                  <h4 className="text-xl text-slate-400 font-semibold relative">
+                    CEO of tuple
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </>
+  );
 }
