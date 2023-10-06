@@ -9,7 +9,7 @@ import {
   Cog6ToothIcon,
   ServerIcon,
 } from '@heroicons/react/20/solid';
-import { Bars3Icon } from '@heroicons/react/24/solid';
+import { Bars3Icon, CheckIcon } from '@heroicons/react/24/solid';
 
 export default function Home() {
   return (
@@ -228,14 +228,14 @@ export default function Home() {
           </div>
         </section>
         <section>
-          <div className="h-[570px] bg-slate-900 relative md:grid hidden grid-cols-5">
-            <div className="h-[150px] w-[150px] top-[35%] left-[50%] absolute rounded-full bg-purple-400 translate-x-[50%] trasnlate-y-[50%] blur-[120px]" />
-            <div className="h-[150px] w-[150px] top-[80%] left-[50%] absolute rounded-full bg-purple-400 translate-x-[50%] trasnlate-y-[50%] blur-[120px]" />
-            <div className="h-[150px] w-[150px] top-[90%] left-[40%] absolute rounded-full bg-purple-400 translate-x-[50%] trasnlate-y-[50%] blur-[120px]" />
-            <div className="h-[150px] w-[150px] top-[90%] left-[30%] absolute rounded-full bg-purple-400 translate-x-[50%] trasnlate-y-[50%] blur-[120px]" />
-            <div className="h-[150px] w-[150px] top-[70%] left-[60%] absolute rounded-full bg-purple-400 translate-x-[50%] trasnlate-y-[50%] blur-[120px]" />
-            <div className="h-[150px] w-[150px] top-[70%] left-[70%] absolute rounded-full bg-purple-400 translate-x-[50%] trasnlate-y-[50%] blur-[120px]" />
-            <div className="h-[150px] w-[150px] top-[50%] left-[75%] absolute rounded-full bg-purple-400 translate-x-[50%] trasnlate-y-[50%] blur-[120px]" />
+          <div className="h-[570px] bg-slate-900 relative md:grid hidden grid-cols-5 ">
+            <div className="h-[150px] w-[150px] top-[35%] left-[50%] z-10 absolute rounded-full bg-purple-400 translate-x-[50%] trasnlate-y-[50%] blur-[120px]" />
+            <div className="h-[150px] w-[150px] top-[80%] left-[50%] z-10 absolute rounded-full bg-purple-400 translate-x-[50%] trasnlate-y-[50%] blur-[120px]" />
+            <div className="h-[150px] w-[150px] top-[90%] left-[40%] z-10 absolute rounded-full bg-purple-400 translate-x-[50%] trasnlate-y-[50%] blur-[120px]" />
+            <div className="h-[150px] w-[150px] top-[90%] left-[30%] z-10 absolute rounded-full bg-purple-400 translate-x-[50%] trasnlate-y-[50%] blur-[120px]" />
+            <div className="h-[150px] w-[150px] top-[70%] left-[60%] z-10 absolute rounded-full bg-purple-400 translate-x-[50%] trasnlate-y-[50%] blur-[120px]" />
+            <div className="h-[150px] w-[150px] top-[70%] left-[70%] z-10 absolute rounded-full bg-purple-400 translate-x-[50%] trasnlate-y-[50%] blur-[120px]" />
+            <div className="h-[150px] w-[150px] top-[50%] left-[75%] z-10 absolute rounded-full bg-purple-400 translate-x-[50%] trasnlate-y-[50%] blur-[120px]" />
             <div className="h-[170px] w-[170px] bottom-[80%] left-[80%] absolute rounded-full bg-purple-400 translate-x-[50%] trasnlate-y-[50%] blur-[120px]" />
             <div className="h-[150px] w-[150px] top-[10%] left-[95%] absolute rounded-full bg-purple-400 translate-x-[50%] trasnlate-y-[50%] blur-[120px]" />
             <div className="grid col-span-2 h-6 translate-x-60 -translate-y-[150%]">
@@ -247,7 +247,7 @@ export default function Home() {
             </div>
             <div className="grid col-span-3 content-center mt-24">
               <div className="flex flex-col gap-10">
-                <p className="text-3xl text-white font-bold w-3/4">
+                <p className="text-3xl text-white font-bold w-3/4 z-50">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Ullam molestias, quo fugiat necessitatibus quas, voluptatibus
                   impedit ab voluptas soluta eaque perspiciatis! Similique
@@ -263,6 +263,147 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="md:hidden bg-slate-900 relative h-[630px] flex flex-col gap-16">
+            <div className="h-52 w-10/12 mx-auto relative bg-slate-400 -translate-y-8 border rounded-2xl border-hidden overflow-hidden">
+              <img
+                src="/img/woman.avif"
+                alt="woman"
+                className="object-cover absolute h-full w-full"
+              />
+            </div>
+            <div className="px-5 flex flex-col gap-7">
+              <p className="text-xl font-bold text-white ">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam
+                molestias, quo fugiat necessitatibus quas, voluptatibus impedit
+                ab voluptas soluta eaque perspiciatis! Similique nostrum
+                possimus odio autem dicta, omnis.
+              </p>
+              <div className="flex flex-col gap-2">
+                <h3 className="text-lg font-semibold text-white">
+                  Judith Black
+                </h3>
+                <h4 className="text-lg text-slate-400 font-semibold relative">
+                  CEO of Tuple
+                </h4>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="md:mt-[250px] mt-[130px]">
+          <div className="flex flex-col gap-6 justify-center items-center max-w-7xl mx-auto md:px-0 px-5">
+            <div className="flex flex-col gap-2 justify-center items-center">
+              <h3 className="md:text-lg text-xl text-indigo-500 font-semibold">
+                Pricing
+              </h3>
+              <h1 className="md:text-5xl text-4xl font-bold text-center">
+                The right price for you, whoever you are
+              </h1>
+            </div>
+            <div>
+              <p className="text-xl text-slate-600 font-semibold md:w-3/4 mx-auto text-center">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia
+                beatae totam consequatur dolor ut molestiae ipsam nemo.
+              </p>
+            </div>
+          </div>
+          {/* cards */}
+          <div className="max-w-7xl mx-auto flex md:flex-row flex-col justify-center items-center md:mt-28 mt-20 md:px-0 px-5 md:gap-0 gap-4">
+            {/* first card */}
+            <div className="border-2 border-gray-200 rounded-3xl py-10 px-8 md:px-11 md:py-11 flex flex-col gap-16 justify-between z-20 md:translate-x-5 md:items-start items-center">
+              <div className="flex flex-col gap-7 w-11/12">
+                <div className="flex flex-col gap-2">
+                  <h2 className="text-lg text-indigo-500 font-semibold">
+                    Hobby
+                  </h2>
+                </div>
+                <div className="flex items-end">
+                  <h1 className="text-5xl font-bold">$19</h1>
+                  <p className="text-lg text-slate-600 font-semibold">/month</p>
+                </div>
+                <div>
+                  <p className="text-lg text-slate-600 font-semibold">
+                    The perfect plan if you{"'"}re just getting started with our
+                    product.
+                  </p>
+                </div>
+                <div>
+                  <ul className="flex flex-col gap-4">
+                    <li className="flex gap-3 text-slate-600 font-semibold">
+                      <CheckIcon className="h-6 w-6 text-indigo-500" /> 5
+                      products
+                    </li>
+                    <li className="flex gap-3 text-slate-600 font-semibold">
+                      <CheckIcon className="h-6 w-6 text-indigo-500" /> 5
+                      products
+                    </li>
+                    <li className="flex gap-3 text-slate-600 font-semibold">
+                      <CheckIcon className="h-6 w-6 text-indigo-500" /> 5
+                      products
+                    </li>
+                    <li className="flex gap-3 text-slate-600 font-semibold">
+                      <CheckIcon className="h-6 w-6 text-indigo-500" /> 5
+                      products
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="w-11/12 border-2 border-indigo-200 rounded-lg py-2 text-center">
+                <button className="text-indigo-500 font-semibold">
+                  Get started today
+                </button>
+              </div>
+            </div>
+            {/* first card */}
+            {/* second card */}
+            <div className="border-2 border-gray-200 rounded-3xl py-10 px-8 md:px-11 md:py-11 flex flex-col gap-16 justify-between z-50 md:-translate-x-7 bg-slate-950">
+              <div className="flex flex-col gap-7 w-11/12">
+                <div className="flex flex-col gap-2">
+                  <h2 className="text-lg text-indigo-500 font-semibold">
+                    Enterprise
+                  </h2>
+                </div>
+                <div className="flex items-end">
+                  <h1 className="text-5xl font-bold text-white">$49</h1>
+                  <p className="text-lg text-slate-200 font-semibold">/month</p>
+                </div>
+                <div>
+                  <p className="text-lg text-slate-200 font-semibold">
+                    Dedicated support and infrastructure for your company.
+                  </p>
+                </div>
+                <div>
+                  <ul className="flex flex-col gap-4">
+                    <li className="flex gap-3 text-slate-200 font-semibold">
+                      <CheckIcon className="h-6 w-6 text-indigo-500" /> 5
+                      products
+                    </li>
+                    <li className="flex gap-3 text-slate-200 font-semibold">
+                      <CheckIcon className="h-6 w-6 text-indigo-500" /> 5
+                      products
+                    </li>
+                    <li className="flex gap-3 text-slate-200 font-semibold">
+                      <CheckIcon className="h-6 w-6 text-indigo-500" /> 5
+                      products
+                    </li>
+                    <li className="flex gap-3 text-slate-200 font-semibold">
+                      <CheckIcon className="h-6 w-6 text-indigo-500" /> 5
+                      products
+                    </li>
+                    <li className="flex gap-3 text-slate-200 font-semibold">
+                      <CheckIcon className="h-6 w-6 text-indigo-500" /> 5
+                      products
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="border-2 border-indigo-500 bg-indigo-500 rounded-lg py-2 text-center">
+                <button className="text-white font-semibold">
+                  Get started today
+                </button>
+              </div>
+            </div>
+            {/* second card */}
           </div>
         </section>
       </main>
