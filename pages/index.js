@@ -9,7 +9,7 @@ import {
   Cog6ToothIcon,
   ServerIcon,
 } from '@heroicons/react/20/solid';
-import { Bars3Icon, CheckIcon } from '@heroicons/react/24/solid';
+import { Bars3Icon, CheckIcon, PlusIcon } from '@heroicons/react/24/solid';
 
 export default function Home() {
   return (
@@ -229,15 +229,6 @@ export default function Home() {
         </section>
         <section>
           <div className="h-[570px] bg-slate-900 relative md:grid hidden grid-cols-5 ">
-            <div className="h-[150px] w-[150px] top-[35%] left-[50%] z-10 absolute rounded-full bg-purple-400 translate-x-[50%] trasnlate-y-[50%] blur-[120px]" />
-            <div className="h-[150px] w-[150px] top-[80%] left-[50%] z-10 absolute rounded-full bg-purple-400 translate-x-[50%] trasnlate-y-[50%] blur-[120px]" />
-            <div className="h-[150px] w-[150px] top-[90%] left-[40%] z-10 absolute rounded-full bg-purple-400 translate-x-[50%] trasnlate-y-[50%] blur-[120px]" />
-            <div className="h-[150px] w-[150px] top-[90%] left-[30%] z-10 absolute rounded-full bg-purple-400 translate-x-[50%] trasnlate-y-[50%] blur-[120px]" />
-            <div className="h-[150px] w-[150px] top-[70%] left-[60%] z-10 absolute rounded-full bg-purple-400 translate-x-[50%] trasnlate-y-[50%] blur-[120px]" />
-            <div className="h-[150px] w-[150px] top-[70%] left-[70%] z-10 absolute rounded-full bg-purple-400 translate-x-[50%] trasnlate-y-[50%] blur-[120px]" />
-            <div className="h-[150px] w-[150px] top-[50%] left-[75%] z-10 absolute rounded-full bg-purple-400 translate-x-[50%] trasnlate-y-[50%] blur-[120px]" />
-            <div className="h-[170px] w-[170px] bottom-[80%] left-[80%] absolute rounded-full bg-purple-400 translate-x-[50%] trasnlate-y-[50%] blur-[120px]" />
-            <div className="h-[150px] w-[150px] top-[10%] left-[95%] absolute rounded-full bg-purple-400 translate-x-[50%] trasnlate-y-[50%] blur-[120px]" />
             <div className="grid col-span-2 h-6 translate-x-60 -translate-y-[150%]">
               <img
                 src="/img/woman.avif"
@@ -406,7 +397,93 @@ export default function Home() {
             {/* second card */}
           </div>
         </section>
+        <section className="max-w-6xl mx-auto mt-72">
+          {/* FQA */}
+          <div className="border-b py-14">
+            <h3 className="text-3xl font-bold">Frequently asked questions</h3>
+          </div>
+          <div className="flex justify-between py-8">
+            <h4 className="text-xl font-bold">
+              Whats the best thing about Switzerland?
+            </h4>
+            <button>
+              <PlusIcon className="h-6" />
+            </button>
+          </div>
+        </section>
       </main>
+      {/* Desktop footer */}
+      <footer className="max-w-full md:block hidden bg-gray-900 mt-60">
+        <div className="max-w-[1500px] mx-auto py-40 flex justify-between">
+          <div className="bg-indigo-500 w-9 h-9 rounded-full " />
+          <div className="flex justify-evenly w-3/4">
+            <ul className="text-lg flex flex-col gap-6">
+              <li className="font-bold text-white mb-3">Solutions</li>
+              <li className=" text-slate-300">Marketing</li>
+              <li className=" text-slate-300">Analytics</li>
+              <li className=" text-slate-300">Commerce</li>
+              <li className=" text-slate-300">Insights</li>
+            </ul>
+            <ul className="text-lg flex flex-col gap-6">
+              <li className="font-bold text-white mb-3">Support</li>
+              <li className=" text-slate-300">Pricing</li>
+              <li className=" text-slate-300">Documentation</li>
+              <li className=" text-slate-300">Guides</li>
+              <li className=" text-slate-300">API status</li>
+            </ul>
+            <ul className="text-lg flex flex-col gap-6">
+              <li className="font-bold text-white mb-3">Company</li>
+              <li className=" text-slate-300">About</li>
+              <li className=" text-slate-300">Bolg</li>
+              <li className=" text-slate-300">Jobs</li>
+              <li className=" text-slate-300">Press</li>
+              <li className=" text-slate-300">Partners</li>
+            </ul>
+            <ul className="text-lg flex flex-col gap-6">
+              <li className="font-bold text-white mb-3">Legal</li>
+              <li className=" text-slate-300">Claim</li>
+              <li className=" text-slate-300">Privacy</li>
+              <li className=" text-slate-300">Terms</li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+      {/* Mobile footer */}
+      <footer className="md:hidden block max-w-full bg-gray-900 mt-32">
+        <div className="py-16 px-5">
+          <div className="bg-indigo-500 w-9 h-9 rounded-full " />
+          <div className="grid grid-cols-2 gap-x-10 mt-16">
+            <ul className="text-lg flex flex-col gap-6">
+              <li className="font-bold text-white text-lg mb-3">Solutions</li>
+              <li className=" text-slate-300">Marketing</li>
+              <li className=" text-slate-300">Analytics</li>
+              <li className=" text-slate-300">Commerce</li>
+              <li className=" text-slate-300">Insights</li>
+            </ul>
+            <ul className="text-lg flex flex-col gap-6">
+              <li className="font-bold text-white text-lg mb-3">Company</li>
+              <li className=" text-slate-300">About</li>
+              <li className=" text-slate-300">Bolg</li>
+              <li className=" text-slate-300">Jobs</li>
+              <li className=" text-slate-300">Press</li>
+              <li className=" text-slate-300">Partners</li>
+            </ul>
+            <ul className="text-lg flex flex-col gap-6">
+              <li className="font-bold text-lg text-white mb-3">Support</li>
+              <li className=" text-slate-300">Pricing</li>
+              <li className=" text-slate-300">Documentation</li>
+              <li className=" text-slate-300">Guides</li>
+              <li className=" text-slate-300">API status</li>
+            </ul>
+            <ul className="text-lg flex flex-col gap-6 mt-14">
+              <li className="font-bold tetx-lg text-white mb-3">Legal</li>
+              <li className=" text-slate-300">Claim</li>
+              <li className=" text-slate-300">Privacy</li>
+              <li className=" text-slate-300">Terms</li>
+            </ul>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
